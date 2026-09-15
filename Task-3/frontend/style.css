@@ -1,0 +1,34 @@
+:root {
+  --primary: #1e3a5f;
+  --accent: #4f8ef7;
+  --bg: #f4f6f9;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: #222; }
+
+.navbar { display: flex; justify-content: space-between; align-items: center; background: var(--primary); color: #fff; padding: 14px 24px; }
+.navbar .brand { font-size: 20px; font-weight: bold; }
+.navbar a { color: #dce9ff; text-decoration: none; margin-left: 18px; transition: color .2s; }
+.navbar a:hover { color: #fff; }
+
+.layout { display: flex; min-height: calc(100vh - 56px); }
+.sidebar { width: 220px; background: #fff; border-right: 1px solid #e2e2e2; padding: 20px 0; }
+.sidebar a { display: block; padding: 12px 24px; color: #333; text-decoration: none; }
+.sidebar a:hover, .sidebar a.active { background: var(--bg); border-left: 4px solid var(--accent); }
+
+.main { flex: 1; padding: 24px; }
+
+.card { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 10px rgba(0,0,0,.06); transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,.12); }
+
+.book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; margin-top: 16px; }
+.book-cover { height: 130px; border-radius: 6px; background: linear-gradient(135deg, var(--accent), var(--primary)); margin-bottom: 10px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:bold; }
+
+.category-pill { display: inline-block; padding: 4px 12px; border-radius: 20px; background: #eaf1ff; color: var(--primary); font-size: 12px; margin: 4px 6px 0 0; }
+
+.search-section { display: flex; gap: 10px; margin-bottom: 10px; }
+.search-section input { flex: 1; padding: 10px; border-radius: 6px; border: 1px solid #ccc; }
+.search-section button { padding: 10px 18px; border: none; border-radius: 6px; background: var(--primary); color: #fff; cursor: pointer; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0);} }
+.fade-in { animation: fadeIn .4s ease-in; }

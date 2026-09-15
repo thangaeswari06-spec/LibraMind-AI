@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>LibraMind AI - Recommendations Demo</title></head>
+<body style="font-family:Arial;max-width:500px;margin:40px auto;">
+  <h2>AI Recommendations Demo</h2>
+  <button onclick="getRecs()">Get Recommendations</button>
+  <pre id="out"></pre>
+  <script>
+    async function getRecs() {
+      const res = await fetch("http://localhost:5007/api/ai/recommendations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          interests: ["python", "ml"],
+          learningLevel: "beginner",
+          quizResults: { Python: 90, SQL: 80, Statistics: 45 }
+        })
+      });
+      const data = await res.json();
+      document.getElementById("out").textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>

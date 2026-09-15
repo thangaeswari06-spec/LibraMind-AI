@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LibraMind AI - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>LibraMind AI</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Search Books</h2>
+    <form action="http://localhost:5001/search" method="POST">
+      <label for="query">Book title or author</label>
+      <input type="text" id="query" name="query" placeholder="e.g. Python" required>
+
+      <label for="category">Category</label>
+      <select id="category" name="category">
+        <option value="">All</option>
+        <option value="Programming">Programming</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Science">Science</option>
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</body>
+</html>

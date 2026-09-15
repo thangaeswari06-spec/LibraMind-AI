@@ -1,0 +1,16 @@
+/* Task 3: Responsive breakpoints */
+@media (max-width: 900px) {
+  .book-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; display: flex; overflow-x: auto; padding: 8px; }
+  .sidebar a { padding: 10px 16px; white-space: nowrap; }
+}
+
+@media (max-width: 480px) {
+  .navbar { flex-direction: column; gap: 8px; text-align: center; }
+  .search-section { flex-direction: column; }
+  .book-grid { grid-template-columns: 1fr; }
+}

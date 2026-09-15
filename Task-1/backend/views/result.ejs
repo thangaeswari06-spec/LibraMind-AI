@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results - LibraMind AI</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>LibraMind AI</h1>
+    <nav><a href="/">Home</a></nav>
+  </header>
+  <div class="container" style="max-width:700px;">
+    <h2>Results for "<%= query %>" <% if (category) { %>in <%= category %><% } %></h2>
+    <% if (results.length === 0) { %>
+      <p>No books found.</p>
+    <% } else { %>
+      <% results.forEach(function(book) { %>
+        <div class="result-item">
+          <strong><%= book.title %></strong> by <%= book.author %> — <em><%= book.category %></em>
+        </div>
+      <% }) %>
+    <% } %>
+    <a href="/">Search again</a>
+  </div>
+</body>
+</html>

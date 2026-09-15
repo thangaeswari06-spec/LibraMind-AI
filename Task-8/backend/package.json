@@ -1,0 +1,11 @@
+{
+  "name": "libramind-task8-backend",
+  "version": "1.0.0",
+  "description": "LibraMind AI - Task 8: Advanced Server-Side Functionality",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}

@@ -1,0 +1,11 @@
+* { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+body { margin: 0; background: #f4f6f9; color: #222; }
+header { background: #1e3a5f; color: #fff; padding: 16px 24px; }
+header h1 { margin: 0; font-size: 22px; }
+nav a { color: #cfe3ff; margin-right: 16px; text-decoration: none; }
+.container { max-width: 500px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+label { display: block; margin: 12px 0 4px; font-weight: bold; }
+input, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+button { margin-top: 18px; width: 100%; padding: 10px; background: #1e3a5f; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+button:hover { background: #16304d; }
+.result-item { border-bottom: 1px solid #eee; padding: 10px 0; }

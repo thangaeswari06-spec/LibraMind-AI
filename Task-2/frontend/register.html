@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register - LibraMind AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>LibraMind AI</h1><nav><a href="login.html">Login</a></nav></header>
+  <div class="container">
+    <h2>Create Account</h2>
+    <form onsubmit="return validateRegisterForm(event)" novalidate>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+      <div class="error-msg" id="nameError"></div>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <div class="error-msg" id="emailError"></div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+      <div class="error-msg" id="passwordError"></div>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" required>
+      <div class="error-msg" id="confirmPasswordError"></div>
+
+      <button type="submit">Register</button>
+      <div id="serverMsg"></div>
+    </form>
+  </div>
+  <script src="validation.js"></script>
+</body>
+</html>

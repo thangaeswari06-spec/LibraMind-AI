@@ -1,0 +1,11 @@
+{
+  "name": "libramind-task2",
+  "version": "1.0.0",
+  "description": "LibraMind AI - Task 2: Validation and temporary server storage",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}

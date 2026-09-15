@@ -1,0 +1,15 @@
+{
+  "name": "libramind-task6-backend",
+  "version": "1.0.0",
+  "description": "LibraMind AI - Task 6: SQL + Database + Authentication",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^16.4.5"
+  }
+}

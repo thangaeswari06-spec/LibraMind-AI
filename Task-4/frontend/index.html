@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LibraMind AI - Task 4</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="brand">📚 LibraMind AI</div>
+    <div>
+      <a href="#" data-route="home">Home</a>
+      <a href="#" data-route="dashboard">Dashboard</a>
+      <a href="#" data-route="books">Books</a>
+      <a href="#" data-route="login">Login</a>
+    </div>
+  </div>
+
+  <div class="layout">
+    <div class="sidebar">
+      <a href="#" data-route="home">Home</a>
+      <a href="#" data-route="dashboard">Dashboard</a>
+      <a href="#" data-route="books">Books</a>
+      <a href="#" data-route="login">Login</a>
+    </div>
+
+    <div class="main">
+      <section id="page-home" class="page fade-in">
+        <h1>Welcome to LibraMind AI</h1>
+        <p>This page demonstrates client-side routing without a page reload — navigate using the links above.</p>
+      </section>
+
+      <section id="page-dashboard" class="page fade-in">
+        <h2>Dashboard</h2>
+        <div class="book-grid">
+          <div class="card"><h3>3</h3><p>Books Borrowed</p></div>
+          <div class="card"><h3>1</h3><p>Overdue</p></div>
+          <div class="card"><h3>72%</h3><p>Learning Progress</p></div>
+        </div>
+      </section>
+
+      <section id="page-books" class="page fade-in">
+        <h2>Book Catalog</h2>
+        <div class="search-section">
+          <input type="text" id="bookSearch" placeholder="Search by title or author...">
+          <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Programming">Programming</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Science">Science</option>
+          </select>
+        </div>
+        <div class="book-grid" id="bookGrid"></div>
+      </section>
+
+      <section id="page-login" class="page fade-in">
+        <h2>Login</h2>
+        <form style="max-width:340px;" onsubmit="return false;">
+          <label>Password</label>
+          <input type="password" id="password" placeholder="Enter a password">
+          <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+          <small>Password strength updates live as you type.</small>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/books.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/routing.js"></script>
+</body>
+</html>
