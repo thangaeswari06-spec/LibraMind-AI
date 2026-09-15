@@ -8,6 +8,9 @@
     "express": "^4.19.2",
     "cors": "^2.8.5",
     "express-rate-limit": "^7.4.0",
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.7.0",
+    "better-sqlite3": "^11.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.4.5"
   }
 }

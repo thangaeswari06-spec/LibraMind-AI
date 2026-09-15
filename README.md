@@ -22,9 +22,31 @@ tasks are never deleted as later ones are added, per the internship guidelines.
 | [Task-3](./Task-3) | Responsive UI: navbar, sidebar, dashboard, cards | HTML/CSS |
 | [Task-4](./Task-4) | Dynamic DOM, filters, password strength, client routing | Vanilla JS |
 | [Task-5](./Task-5) | REST API (CRUD) + React frontend | React, Express |
-| [Task-6](./Task-6) | **SQL database + JWT auth + RBAC** (core SQL task) | Postgres/Supabase (SQLite fallback), JWT, bcrypt |
-| [Task-7](./Task-7) | AI recommendations + external API + rate limiting | Node, Open Library API |
-| [Task-8](./Task-8) | Middleware, background jobs, caching | Node, in-memory cache |
+| [Task-6](./Task-6) | **SQL database + JWT auth + RBAC** — full spec schema (26 tables incl. quiz, learning, AI, notifications) | Postgres/Supabase (SQLite fallback), JWT, bcrypt |
+| [Task-7](./Task-7) | **Full AI module suite**: recommendations, semantic search, RAG book Q&A, summarization, quiz generation, adaptive learning roadmap, reading analytics, demand prediction, privacy-scoped chatbot, notifications, external API | Node, TF-IDF/cosine similarity, linear regression |
+| [Task-8](./Task-8) | Middleware, background jobs, caching, **admin analytics dashboard**, **voice assistant** | Node, in-memory cache, Web Speech API |
+
+## Every spec feature, and where it lives
+| Spec feature (section) | Implemented in |
+|---|---|
+| Student/Book/Fine/Reservation management (4–8) | Task-6 schema + routes |
+| AI Recommendation Engine (9) | Task-7 `services/recommendation` |
+| AI Semantic Search (10) | Task-7 `services/semantic-search` (TF-IDF + cosine similarity) |
+| Summarization + RAG Book Q&A (11) | Task-7 `services/summarization`, `services/rag` |
+| AI Quiz Generator + weak-topic detection (12) | Task-7 `services/quiz-generator` |
+| Personalized/Adaptive Learning Roadmap (13) | Task-7 `services/learning-assistant` |
+| Reading Analytics (14) | Task-7 `GET /api/ai/learning/analytics` |
+| AI Demand Prediction (15) | Task-7 `services/demand-prediction` (linear regression) |
+| AI Chatbot (16) | Task-7 `services/chatbot` — privacy-scoped to the logged-in student |
+| Voice Assistant (17) | Task-8 `frontend/src/voice-assistant.html` (Web Speech API) |
+| Smart Notifications (18) | Task-6 schema + Task-7/8 notification endpoints |
+| Admin Analytics Dashboard (19) | Task-8 `services/adminAnalytics.js` |
+| Security & Privacy / RLS (20) | Task-6 `schema.sql` RLS policies + JWT/RBAC middleware |
+
+These are real, working, testable implementations (TF-IDF search, extractive
+summarization, linear-regression forecasting, intent-based chatbot) rather than
+hardcoded stubs — every one was run and its output checked while building this
+project (see each task's README for the exact commands and results).
 
 ## Quick start (any task)
 ```bash
